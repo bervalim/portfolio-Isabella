@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Footer } from "../Footer"
+// import { Footer } from "../Footer"
 import { Header } from "../Header"
 
 interface DefaultTemplateProps {
@@ -11,7 +11,7 @@ export const DefaultTemplate = ({children}: DefaultTemplateProps) => {
         <>
         <Header/>
             <main>{children}</main>
-        <Footer/>
+        {/* <Footer/> */}
         </>
     )
 }

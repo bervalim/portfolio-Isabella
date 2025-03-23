@@ -1,29 +1,90 @@
-import { Link } from "react-router-dom";
-import Elipse from "../../assets/elipse.png";
+import { Link, NavLink } from "react-router-dom";
+import Logo from "../../assets/Logo.svg";
 import Linkedin from "../../assets/linkedin-square.png";
 import Behance from "../../assets/behance-square.png";
+import styles from "./styles.module.scss";
+import { useEffect, useState } from "react";
+import { FiMenu } from "react-icons/fi";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+          if (window.innerWidth > 768) {
+            setIsMenuOpen(false);
+          }
+        };
+      
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
+  
+    const navLinks = (
+      <>
+        <NavLink
+          to="/projects"
+          className={({ isActive }) => (isActive ? "paragraph menus active" : "paragraph menus")}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          PROJECTS
+        </NavLink>
+        <NavLink
+          to="/aboutMe"
+          className={({ isActive }) => (isActive ? "paragraph menus active" : "paragraph menus")}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          ABOUT ME
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => (isActive ? "paragraph menus active" : "paragraph menus")}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          CONTACT
+        </NavLink>
+      </>
+    );
+  
     return (
-        <header>
-            <div className="container"> 
-                <div>
-                    <div>
-                        <img src={ Elipse } alt = "Elipse" width={300}></img>
-                        <Link to="">PROJECTS</Link>
-                        <Link to="">ABOUT ME</Link>
-                        <Link to="">CONTACT</Link>
-                    </div>
-                    <div>
-                        <a href="https://www.behance.net/bellazelus" target="_blank">
-                            <img src={ Behance } alt="Behance" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/isabella-czelusniak-7692a8181/" target="_blank">
-                            <img src={ Linkedin } alt="Linkedin" />
-                        </a>
-                    </div>
-                </div>
+      <header>
+        <div className="container">
+          <div className={styles.flexbox}>
+            <div className={styles.left}>
+              <Link to="/">
+                <img src={Logo} alt="Elipse" />
+              </Link>
+              <nav className={styles.desktopNav}>{navLinks}</nav>
             </div>
-        </header>
-    )
-}
+  
+            <div className={styles.rigth}>
+              <div className={styles.socials}>
+                <a href="https://www.behance.net/bellazelus" target="_blank">
+                  <img src={Behance} alt="Behance" />
+                </a>
+                <a href="https://www.linkedin.com/in/isabella-czelusniak-7692a8181/" target="_blank">
+                  <img src={Linkedin} alt="Linkedin" />
+                </a>
+              </div>
+              <button className={styles.menuToggle} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <FiMenu size={24} />
+              </button>
+            </div>
+          </div>
+  
+          <nav className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
+            {navLinks}
+            <div className={styles.mobileSocials}>
+              <a href="https://www.behance.net/bellazelus" target="_blank">
+                <img src={Behance} alt="Behance" />
+              </a>
+              <a href="https://www.linkedin.com/in/isabella-czelusniak-7692a8181/" target="_blank">
+                <img src={Linkedin} alt="Linkedin" />
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+    );
+  };

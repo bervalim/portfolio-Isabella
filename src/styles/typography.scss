@@ -21,8 +21,13 @@
 
     &.menus {
         font-weight: 600;
-        font-size: clamp(.75rem, 4vw, .9375rem);
+        font-size: clamp(11x, 4vw, 14px);
         color: var(--gray-50);
 
+    }
+
+    &.menus.active{
+        font-weight: 700;
+        color: #384255;
     }
 }

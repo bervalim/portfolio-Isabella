@@ -1,0 +1,92 @@
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+  
+    .rigth {
+      display: flex;
+      align-items: center;
+      gap: 19px;
+  
+      .menuToggle {
+        display: none;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  
+    .socials {
+      display: flex;
+      gap: 16px;
+    }
+  }
+  
+  // Links desktop
+  .desktopNav {
+    display: flex;
+    gap: 25px;
+  }
+  
+  // Menu mobile
+  .mobileMenu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(100vh - 80px); // 💡 ocupa a área exata da tela abaixo do header
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+  
+    &.open {
+      display: flex;
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+  }
+  
+  .mobileSocials {
+    display: flex;
+    gap: 16px;
+    margin-top: auto; // ✨ isso força a div a ir pro "fim" da coluna
+    padding-bottom: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .desktopNav {
+      display: none;
+    }
+
+    .flexbox {
+      flex-direction: row;
+  
+      .rigth {
+        .menuToggle {
+          display: block;
+        }
+  
+        .socials {
+          display: none;
+        }
+      }
+    }
+  }
+  
