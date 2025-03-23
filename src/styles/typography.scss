@@ -8,12 +8,11 @@
       color: var(--gray-800);
     }
 
-    &.menus {
-        font-weight: 600;
-        font-size: clamp(.75rem, 4vw, .9375rem);
+    &.subtitle{
         color: var(--gray-50);
-
+        font-size: clamp(1.5625rem, 4vw, 1.875rem);
     }
+  
 }
 
 .paragraph{
