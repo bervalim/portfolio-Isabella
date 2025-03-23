@@ -1,0 +1,16 @@
+:root {
+    --font-primary: "Inter", sans-serif;
+    --gray-800: #252D3C;;
+    --gray-50:  #5F6D7E;
+    --gray-500: #2E3646;
+}
+
+body {
+    background: linear-gradient(
+        135deg,
+        rgba(158, 204, 211, 0.3) 0%,
+        rgba(158, 204, 211, 0.3) 60%,
+        rgba(239, 173, 196, 0.35) 88%
+      );
+    
+  }

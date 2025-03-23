@@ -1,0 +1,29 @@
+.title {
+    font-family: var(--font-primary);
+    line-height: 1.4;
+
+    &.one {
+      font-weight: 600; 
+      font-size: clamp(3.75rem, 5vw,5rem); 
+      color: var(--gray-800);
+    }
+
+    &.menus {
+        font-weight: 600;
+        font-size: clamp(.75rem, 4vw, .9375rem);
+        color: var(--gray-50);
+
+    }
+}
+
+.paragraph{
+    font-family: var(--font-primary);
+    line-height: 1.4;
+
+    &.menus {
+        font-weight: 600;
+        font-size: clamp(.75rem, 4vw, .9375rem);
+        color: var(--gray-50);
+
+    }
+}
