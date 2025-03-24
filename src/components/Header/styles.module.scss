@@ -34,33 +34,56 @@
     display: flex;
     gap: 25px;
   }
+
+
   
   // Menu mobile
   .mobileMenu {
-    display: none;
+    position: fixed;
+    inset: 0; // top: 0; right: 0; bottom: 0; left: 0
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3f3f3;
+    z-index: 9999;
+  
+    padding: 6rem 1rem 2rem; // espaço para logo no topo e ícones no fim
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: calc(100vh - 80px); // 💡 ocupa a área exata da tela abaixo do header
-    padding: 2rem 1rem;
     gap: 1.5rem;
-    transition: all 0.4s ease-in-out;
-    transform: translateY(-20px);
+  
     opacity: 0;
     pointer-events: none;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    z-index: 10;
-  
+    transform: translateY(-20px);
+    transition: all 0.4s ease-in-out;
     &.open {
       display: flex;
       opacity: 1;
       pointer-events: auto;
       transform: translateY(0);
     }
+
+    .closeButton {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: transparent;
+      border: none;
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--gray-800); // ou qualquer cor escura do projeto
+      cursor: pointer;
+      z-index: 10000;
+    }
+
+  }
+
+  .flex_nav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
   
   .mobileSocials {

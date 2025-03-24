@@ -19,6 +19,19 @@
     font-family: var(--font-primary);
     line-height: 1.4;
 
+    &.one{
+        font-weight: 500;
+        font-size: clamp(12px, 4vw, 16px);
+        color: var(--gray-100);
+    }
+
+    &.links{
+        font-weight: 400;
+        line-height: 150%;
+        font-size: clamp(12px, 4vw, 16px);
+        color: var(--gray-50);;
+    }
+
     &.menus {
         font-weight: 600;
         font-size: clamp(11x, 4vw, 14px);

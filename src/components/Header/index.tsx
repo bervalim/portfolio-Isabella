@@ -5,7 +5,6 @@ import Behance from "../../assets/behance-square.png";
 import styles from "./styles.module.scss";
 import { useEffect, useState } from "react";
 import { FiMenu } from "react-icons/fi";
-import { motion, AnimatePresence } from "framer-motion";
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,6 +19,13 @@ export const Header = () => {
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
       }, []);
+
+      useEffect(() => {
+        document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+        return () => {
+          document.body.style.overflow = "auto";
+        };
+      }, [isMenuOpen]);
   
     const navLinks = (
       <>
@@ -73,7 +79,20 @@ export const Header = () => {
             </div>
           </div>
   
-          <nav className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
+        </div>
+
+        <nav className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
+            <button
+            className={styles.closeButton}
+            onClick={() => setIsMenuOpen(false)}
+            aria-label="Close menu"
+        >
+            <FiMenu size={24} />
+        </button>
+          
+
+         
+
             {navLinks}
             <div className={styles.mobileSocials}>
               <a href="https://www.behance.net/bellazelus" target="_blank">
@@ -84,7 +103,6 @@ export const Header = () => {
               </a>
             </div>
           </nav>
-        </div>
       </header>
     );
   };

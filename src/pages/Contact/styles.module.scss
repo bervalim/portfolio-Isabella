@@ -1,0 +1,49 @@
+.contact {
+    padding: 6rem 2rem;
+    height: 100%;
+  
+    .wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .infoGroup {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      width: 100%;
+      gap: 3rem;
+    }
+  
+    .infoItem {
+      display: flex;
+      flex-direction: column;
+    //   justify-content: flex-end;
+      align-items: flex-end;
+      gap: 1rem;
+
+      a{
+        text-decoration: underline;
+        color: var(--gray-50);;
+      }
+  
+      .label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+  
+      a,
+      p {
+        font-size: 1rem;
+        // color: var(--gray-800);
+      }
+  
+      hr {
+        border-bottom: 1px solid var(--gray-50);
+        margin-top: 0.5rem;
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+  }
