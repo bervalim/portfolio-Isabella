@@ -89,10 +89,9 @@ export const Header = () => {
         >
             <FiMenu size={24} />
         </button>
-          
-
-         
-
+          <NavLink to="/">
+              <img src={Logo} alt="Elipse" className={styles.elipse}/>
+          </NavLink>
             {navLinks}
             <div className={styles.mobileSocials}>
               <a href="https://www.behance.net/bellazelus" target="_blank">

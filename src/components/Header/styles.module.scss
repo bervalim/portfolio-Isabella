@@ -64,6 +64,12 @@
       transform: translateY(0);
     }
 
+    .elipse{
+      position:absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+    }
+
     .closeButton {
       position: absolute;
       top: 1.5rem;
@@ -76,6 +82,7 @@
       cursor: pointer;
       z-index: 10000;
     }
+
 
   }
 
