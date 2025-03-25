@@ -8,6 +8,12 @@
       color: var(--gray-800);
     }
 
+    &.two{
+        font-weight: 700;
+        font-size: clamp(30px,3vw, 48px);
+        line-height: 150%;
+    }
+
     &.subtitle{
         color: var(--gray-50);
         font-size: clamp(1.5625rem, 4vw, 1.875rem);
@@ -22,6 +28,12 @@
     &.one{
         font-weight: 500;
         font-size: clamp(12px, 4vw, 16px);
+        color: var(--gray-100);
+    }
+
+    &.two{
+        font-weight: 400;
+        font-size: clamp(12px, 3vw, 16px);
         color: var(--gray-100);
     }
 
