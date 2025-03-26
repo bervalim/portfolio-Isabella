@@ -1,0 +1,36 @@
+.flexbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:22px;
+
+    h2{
+        margin-bottom: 27px;
+    }
+    
+    .list li{
+        width: 100%;
+        max-width: 650px;
+        overflow-wrap: break-word;
+        word-break: normal;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    hr {
+        border-bottom: 1px solid var(--gray-50);
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 540px;
+      }
+
+    
+  
+}
+
+
+@media(max-width: 734px) {
+    .flexbox {
+        flex-direction: column;
+    }
+  }

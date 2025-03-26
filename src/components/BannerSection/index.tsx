@@ -18,7 +18,6 @@ export const BannerSection = () => {
       <div className="container md">
         <div className={style.flexbox}>
           {isMobile ? (
-            // Layout para mobile (imagem + título lado a lado)
             <> 
             <div className={style.mobileRow}>
                 <div className={style.topMobileRow}>
@@ -42,7 +41,6 @@ export const BannerSection = () => {
             </>
             
           ) : (
-            // Layout padrão
             <>
               <div>
                 <h1 className="title two">

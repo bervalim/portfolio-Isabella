@@ -3,7 +3,7 @@ import Logo from "../../assets/Logo.svg";
 import Linkedin from "../../assets/linkedin-square.png";
 import Behance from "../../assets/behance-square.png";
 import styles from "./styles.module.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import { FiMenu } from "react-icons/fi";
 
 export const Header = () => {
@@ -26,7 +26,8 @@ export const Header = () => {
           document.body.style.overflow = "auto";
         };
       }, [isMenuOpen]);
-  
+
+     
     const navLinks = (
       <>
         <NavLink
@@ -81,7 +82,7 @@ export const Header = () => {
   
         </div>
 
-        <nav className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
+        <nav  className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
             <button
             className={styles.closeButton}
             onClick={() => setIsMenuOpen(false)}
