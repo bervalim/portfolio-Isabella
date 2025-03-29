@@ -1,9 +1,19 @@
-import { DefaultTemplate } from "../../components/DefaultTemplate"
+import { AdvisorSection } from "../../components/AdvisorSection"
+import { ClusterSection } from "../../components/ClusterSection"
+// import { DefaultTemplate } from "../../components/DefaultTemplate"
+import { Header } from "../../components/Header"
+import { IokeeSection } from "../../components/IokeeSection"
+
 
 export const Projects = () => {
     return(
-        <DefaultTemplate>
-            <></>
-        </DefaultTemplate>
+        <>
+              <Header/>
+            <AdvisorSection/>
+            <ClusterSection/>
+            <IokeeSection/>
+        </>
+      
+        
     )
 }

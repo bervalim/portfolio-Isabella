@@ -1,0 +1,104 @@
+.section {
+    margin-top: 80px;
+  
+    .flexbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 100px;
+      flex-wrap: wrap;
+  
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+    
+  
+    .imageWrapper {
+      position: relative;
+      flex: 1;
+      max-width: 700px;
+      width: 100%;
+  
+      .bgImage {
+        position: absolute;
+        top: 40px;
+        right: -80px;
+        width: 100%;
+        max-width: 600px;
+        opacity: 0.85;
+        z-index: 0;
+  
+        @media (max-width: 1024px) {
+          display: none;
+        }
+      }
+  
+      .foregroundImage {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  
+    .content {
+      flex: 1;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  
+      h2 {
+        margin-bottom: 10px;
+      }
+  
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+  
+        span {
+          background-color: #f1f1f1;
+          padding: 6px 12px;
+          border-radius: 6px;
+          white-space: nowrap;
+        }
+      }
+  
+      .caseStudyLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 500;
+        color: var(--gray-900);
+        text-decoration: none;
+
+        span:hover{
+          text-decoration: underline;
+      }
+
+  
+        svg {
+          transition: transform 0.2s ease;
+        }
+  
+        &:hover {
+          color: var(--primary-color);
+  
+          svg {
+            transform: translateX(3px);
+          }
+        }
+      }
+  
+      @media (max-width: 1024px) {
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+  

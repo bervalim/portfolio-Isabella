@@ -4,7 +4,7 @@
 
     &.one {
       font-weight: 600; 
-      font-size: clamp(3.75rem, 5vw,5rem); 
+      font-size: clamp(4.6875rem, 5vw, 5.625rem); 
       color: var(--gray-800);
     }
 
@@ -62,6 +62,19 @@
         line-height: 150%;
         color: var(--gray-100);
         font-style: italic;
+    }
+
+    &.six {
+        font-weight: 600;
+        font-size: clamp(11px, 4vw, 15px);
+        color: var(--gray-500);
+
+    }
+
+    &.seven{
+        font-weight: 500;
+        font-size: clamp(11px, 4vw, 14px);
+        color: var(--gray-500);
     }
 
     &.links{

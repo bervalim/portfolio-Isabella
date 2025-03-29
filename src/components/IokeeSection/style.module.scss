@@ -1,0 +1,98 @@
+.section {
+    padding-block: 80px 0;
+  
+    .flexbox {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      flex-wrap: wrap;
+  
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+    }
+  
+    .content {
+      flex: 1;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  
+      h2 {
+        margin-bottom: 10px;
+      }
+  
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+  
+        span {
+          background-color: #f1f1f1;
+          padding: 6px 12px;
+          border-radius: 6px;
+          white-space: nowrap;
+        }
+      }
+  
+      .caseStudyLink {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 500;
+        color: var(--gray-900);
+        text-decoration: none;
+  
+        svg {
+          transition: transform 0.2s ease;
+        }
+
+        span:hover{
+            text-decoration: underline;
+        }
+  
+        &:hover {
+          color: var(--primary-color);
+          svg {
+            transform: translateX(3px);
+          }
+        }
+      }
+  
+      @media (max-width: 1024px) {
+        align-items: center;
+        text-align: center;
+      }
+    }
+  
+    .imageWrapper {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      
+        img {
+          width: 100%;
+          height: auto;
+          max-height: 95vh;
+          object-fit: contain;
+          transform: translateY(5%);
+          margin-bottom: -40px; // força a encostar no final da viewport
+        }
+      
+        @media (max-width: 1024px) {
+          justify-content: center;
+      
+          img {
+            transform: none;
+            margin-bottom: 0;
+            max-height: none;
+            width: 100%;
+          }
+        }
+      }
+  }
