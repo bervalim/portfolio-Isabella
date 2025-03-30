@@ -1,8 +1,8 @@
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import style from "./style.module.scss";
-import Cluster1 from "../../assets/Cluster1.png"; // foreground
-import Cluster2 from "../../assets/Cluster2.png"; // background
+import Cluster2 from "../../assets/Cluster.png"; // foreground
+
 
 export const ClusterSection = () => {
     return (
@@ -28,7 +28,7 @@ export const ClusterSection = () => {
 
                     <div className={style.imageWrapper}>
                         <img src={Cluster2} alt="Cluster background UI" className={style.bgImage} />
-                        <img src={Cluster1} alt="Cluster screen mockup" className={style.foregroundImage} />
+                        {/* <img src={Cluster1} alt="Cluster screen mockup" className={style.foregroundImage} /> */}
                     </div>
                 </div>
             </div>
