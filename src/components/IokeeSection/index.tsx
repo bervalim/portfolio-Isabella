@@ -3,8 +3,11 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Iokee from "../../assets/Iooke4.png";
 import { useState, useEffect } from "react";
+import { useInViewAnimation } from "../../hooks/useInviewAnimation";
+import { motion } from "framer-motion";
 
 export const IokeeSection = () => {
+    const { ref, isInView } = useInViewAnimation();
     const [isMobile, setIsMobile] = useState(window.innerWidth < 960);
           useEffect(() => {
                   const handleResize = () => {
@@ -15,13 +18,21 @@ export const IokeeSection = () => {
                   return () => window.removeEventListener("resize", handleResize);
               }, []);
   return (
-    <section className={style.section}>
+    <section className={style.section} ref={ref}>
       <div className="container md">
         <div className={style.flexbox}>
       <div className={style.content}>
         {isMobile && (
           <>
-            <img src={Iokee} alt="Iokee App mockup" />
+            <motion.img
+              src={Iokee}
+              alt="Iokee App mockup"
+              className={style.image}
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              whileHover={{ scale: 1.02, rotateZ: -1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            />
             <h2 className="title one">Iokee</h2>
           </>
         )}
@@ -46,7 +57,15 @@ export const IokeeSection = () => {
 
       <div className={style.imageWrapper}>
         {!isMobile && <h2 className="title one">Iokee</h2>}
-        {!isMobile && <img src={Iokee} alt="Iokee App mockup" />}
+        {!isMobile &&  <motion.img
+              src={Iokee}
+              alt="Iokee App mockup"
+              className={style.image}
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              whileHover={{ scale: 1.02, rotateZ: -1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            />}
       </div>
         </div>
       </div>

@@ -4,7 +4,8 @@ import { FiArrowUpRight } from "react-icons/fi";
 import style from "./style.module.scss";
 import { useInViewAnimation } from "../../hooks/useInviewAnimation";
 import { useEffect, useState } from "react";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
+
 
 export const AdvisorSection = () => {
     const { ref, isInView } = useInViewAnimation();
@@ -27,7 +28,15 @@ export const AdvisorSection = () => {
                             className={style.imageWrapper}
                             >
                            {!isMobile && <h2 className="title one">Advisor</h2>}
-                            <img src={Advisor3} alt="Advisor UI background" className={style.bgImage} />
+                           <motion.img
+                                src={Advisor3}
+                                alt="Advisor UI background"
+                                className={style.bgImage}
+                                initial={{ opacity: 0, x: 30 }}
+                                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                                whileHover={{ x: -15 }}
+                                transition={{ duration: 0.6, ease: "easeOut" }}
+                                />
                 
                         </div>
 

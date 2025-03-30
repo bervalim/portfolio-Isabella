@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import style from "./style.module.scss";
 import Cluster2 from "../../assets/Cluster4.png"; // foreground
 import { useEffect, useState } from "react";
+import { useInViewAnimation } from "../../hooks/useInviewAnimation";
+import { motion } from "framer-motion";
 
 
 export const ClusterSection = () => {
+        const { ref, isInView } = useInViewAnimation();
         const [isMobile, setIsMobile] = useState(window.innerWidth < 960);
         useEffect(() => {
                 const handleResize = () => {
@@ -16,7 +19,7 @@ export const ClusterSection = () => {
                 return () => window.removeEventListener("resize", handleResize);
             }, []);
     return (
-        <section className={style.section}>
+        <section className={style.section} ref={ref}>
             <div className="container md">
                 <div className={style.flexbox}>
                 <div className={style.content}>
@@ -40,7 +43,10 @@ export const ClusterSection = () => {
 
                     <div className={style.imageWrapper}>
                     {!isMobile && <h2 className="title one">Cluster</h2>}
-                        <img src={Cluster2} alt="Cluster background UI" className={style.bgImage} />
+                        <motion.img src={Cluster2} alt="Cluster background UI" className={style.bgImage} initial={{ opacity: 0, x: -30 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : {}}
+                        whileHover={{ x: 10 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }} />
                     </div>
                 </div>
             </div>
