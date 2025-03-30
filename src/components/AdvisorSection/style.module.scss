@@ -20,12 +20,8 @@
         gap: 30px;
   
         h2 {
-          position: static; // remove absoluto no mobile
-          // margin: 0;
-          // font-size: clamp(2rem, 6vw, 3rem);
-          // text-align: left;
-          // width: 100%;
-          // padding: 0 20px;
+          position: static; 
+      
         }
       }
     }
@@ -37,15 +33,12 @@
       width: 100%;
   
       .bgImage {
-        // width: 1300px;
-        // height: 542px;
         opacity: 0.85;
       }
   
     }
   
     .content {
-      // flex: 1;
       max-width: 500px;
       display: flex;
       flex-direction: column;
