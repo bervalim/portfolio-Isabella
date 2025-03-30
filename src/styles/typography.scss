@@ -20,6 +20,13 @@
         font-size: clamp(30px, 4vw, 36px);
     }
 
+    &.biggest{
+        font-weight: 600;
+        color: var(--gray-800);
+        font-size: clamp(3rem, 27vw, 250px); 
+        line-height: 150%;
+    }
+
     &.subtitle{
         color: var(--gray-50);
         font-size: clamp(1.5625rem, 4vw, 1.875rem);
@@ -30,6 +37,12 @@
 .paragraph{
     font-family: var(--font-primary);
     line-height: 1.4;
+
+    &.biggest{
+        font-weight: 400;
+        color: var(--gray-50);
+        font-size: clamp(28px,5vw,32px);
+    }
 
     &.one{
         font-weight: 500;

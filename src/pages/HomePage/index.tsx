@@ -1,9 +1,13 @@
-import { DefaultTemplate } from "../../components/DefaultTemplate"
+import { Header } from "../../components/Header"
+import { HomePageSetion } from "../../components/HomePageSection"
 
 export const HomePage = () => {
     return (
-        <DefaultTemplate>
-            <></>
-        </DefaultTemplate>
+            <>
+                <Header/>
+                <HomePageSetion/>
+            </>
+               
+           
     )
 }
