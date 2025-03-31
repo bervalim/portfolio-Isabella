@@ -51,7 +51,7 @@ export const AdvisorSection = () => {
                             <span className="paragraph seven">UX Research</span>
                         </div>
 
-                        <Link to="" className={style.caseStudyLink}>
+                        <Link to="/adivisor-case-study" className={style.caseStudyLink}>
                             <span className="paragraph six">View Case Study</span>
                             <FiArrowUpRight size={19} />
                         </Link>

@@ -7,7 +7,6 @@ import { IokeeSection } from "../../components/IokeeSection"
 export const Projects = () => {
     return(
         <DefaultTemplate>
-               
             <AdvisorSection/>
             <ClusterSection/>
             <IokeeSection/>
