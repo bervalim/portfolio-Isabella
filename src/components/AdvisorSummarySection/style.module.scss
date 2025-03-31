@@ -1,0 +1,56 @@
+.section{
+    .flexbox {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 10px;
+
+        .texts{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+            padding-bottom: 75px; // ajusta conforme o rodapé do monitor
+
+            h2 {
+                margin: 0;
+                transform: translateY(5px); // ajuste fino para alinhar com a base da imagem
+              }
+          
+        }
+
+        @media(max-width:768px){
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+
+            .texts{
+                padding-bottom: 0;
+            }
+        }
+
+        
+
+        .videoWrapper {
+          position: relative;
+          width: 100%;
+          max-width: 1200px;
+          
+      
+          .monitorImage {
+            width: 100%;
+          }
+      
+          .advisorVideo {
+            position: absolute;
+            top: 4.8%;         // subiu um pouco mais
+            left: 6.4%;        // empurrou mais para a direita
+            width: 88%;      // levemente menor para não ultrapassar as bordas
+            height: 82.2%;     // ligeiramente menor
+            object-fit: cover;
+            border-radius: 4px;
+            pointer-events: none;
+          }
+        }
+    }
+}

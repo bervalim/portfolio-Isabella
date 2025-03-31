@@ -20,6 +20,13 @@
         font-size: clamp(30px, 4vw, 36px);
     }
 
+    &.five{
+        font-weight: 700;
+        font-style: solid;
+        text-decoration: underline;
+        font-size: clamp(55px,4vw,68px);
+    }
+
     &.biggest{
         font-weight: 600;
         color: var(--gray-800);
