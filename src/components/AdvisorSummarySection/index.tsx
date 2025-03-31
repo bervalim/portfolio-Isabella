@@ -21,24 +21,32 @@ export const AdvisorSummarySection = () => {
                         </video>
                     </div>
                     <div className={style.texts}>
-                        <span style={{ display: "none" }}>dd</span>
                         <h2 className="title five">Advisor</h2>
-                        <p>06.21 to 07.22</p>
+                        <p className="paragraph eigth" >06.21 to 07.22</p>
                     </div>
                 </div>
                 </div>
             <div className="container md">
-                <h3>1. What is PromoAI</h3>
+                <h3 className="title six">1. What is PromoAI</h3>
                 <div>
                     <div>
-                        <h4>ABout the Product</h4>
-                        <p>A single platform for all promotional management, Promotion Solution is broken into three key modules: Promotion Analyzer, Promotion Planner, and Promotion Advisor. 
+                        <h4  className="title seven">ABOUT THE PRODUCT</h4>
+                        <p className="paragraph nine">A single platform for all promotional management, {" "}
+                    <a
+                        href="https://cognira.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#49556D", textDecoration: "underline" }}
+                    >
+                        Promotion Solution
+                    </a>{" "} 
+                    is broken into three key modules: Promotion Analyzer, Promotion Planner, and Promotion Advisor. 
                        </p>
-                        <p>The app aims to assist retailers in better planning, executing, and analyzing promotions.</p>
+                        <p className="paragraph nine">The app aims to {" "}<span  style={{ fontWeight: "bold" }}>{" "}assist retailers in better planning, executing, and analyzing promotions.</span>{" "}</p>
                     </div>
                     <div>
-                        <h4>Module Goals & PURPOSE</h4>
-                        <p>The new module is designed to optimize promotions, helping users achieve their goals related to sales, quantity, revenue, or margin.</p>
+                        <h4  className="title seven"> MODULE GOALS & PURPOSE</h4>
+                        <p className="paragraph nine">The new module is designed to {" "}<span style={{ fontWeight: "bold" }}>optimize promotions</span>, helping users achieve their goals related to <span style={{ fontWeight: "bold" }}>sales, quantity, revenue, or margin.</span></p>
                     </div>
                 </div>
                 <div>
