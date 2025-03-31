@@ -10,8 +10,9 @@
     
       h2{
         top: -5%;
-        left: 37.5%;
+        left: 75%;
         position: absolute;
+        z-index: 1;
       }
 
 
@@ -31,9 +32,12 @@
       flex: 1;
       max-width: 700px;
       width: 100%;
+      position: relative;
   
       .bgImage {
         opacity: 0.85;
+        position: relative;
+        z-index: 2;
       }
   
     }
