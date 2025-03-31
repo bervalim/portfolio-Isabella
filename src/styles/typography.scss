@@ -4,7 +4,7 @@
 
     &.one {
       font-weight: 600; 
-      font-size: clamp(4.6875rem, 5vw, 5.625rem); 
+      font-size: clamp(40px, 5vw, 5.625rem); 
       color: var(--gray-800);
     }
 
@@ -41,7 +41,7 @@
     &.biggest{
         font-weight: 400;
         color: var(--gray-50);
-        font-size: clamp(28px,5vw,32px);
+        font-size: clamp(22px,5vw,32px);
     }
 
     &.one{

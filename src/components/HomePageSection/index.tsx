@@ -1,50 +1,81 @@
+import { useEffect, useRef, useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import style from "./style.module.scss";
-import { Zoom } from "react-awesome-reveal";
-import { useEffect, useRef, useState } from "react";
-import Cluster2 from "../../assets/Cluster4.png"
+import Cluster2 from "../../assets/Cluster4.png";
 import Iokee from "../../assets/Iooke4.png";
 
 export const HomePageSetion = () => {
   const thereRef = useRef<HTMLSpanElement>(null);
   const [animateThere, setAnimateThere] = useState(false);
-
-  // Ativa no scroll
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setAnimateThere(true);
-      },
-      { threshold: 0.5 }
-    );
-
-    if (thereRef.current) observer.observe(thereRef.current);
-
-    return () => {
-      if (thereRef.current) observer.unobserve(thereRef.current);
-    };
-  }, []);
+  const [animateHello, setAnimateHello] = useState(false);
+  const [animateCluster, setAnimateCluster] = useState(false);
+  const [animateIokee, setAnimateIokee] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const triggerAnimation = () => {
-    // Remove e reativa a classe pra reiniciar animação
     setAnimateThere(false);
-    setTimeout(() => setAnimateThere(true), 10);
+    setAnimateHello(false);
+    setAnimateCluster(false);
+    setAnimateIokee(false);
+
+    setTimeout(() => {
+      setAnimateThere(true);
+      setAnimateHello(true);
+      setAnimateCluster(true);
+      setAnimateIokee(true);
+    }, 10);
   };
+
+  useEffect(() => {
+    triggerAnimation();
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1100);
+    };
+  
+    handleResize(); // Executa no load inicial
+    window.addEventListener("resize", handleResize);
+  
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
 
   return (
     <section className={style.section}>
       <div className="container">
-        <img src={Cluster2} className={style.cluster}/>
+        <div className={style.flexcontainer}>
+            <img
+      src={Cluster2}
+      onMouseEnter={triggerAnimation}
+      onClick={triggerAnimation}
+      className={`
+        ${style.cluster}
+        ${animateCluster ? style.animateCluster : ""}
+        ${isMobile ? style.mobileImage : ""}
+      `}
+      />
         <div className={style.flexbox}>
           <h1 className="title biggest">
-            <div className={style.flex} onMouseEnter={triggerAnimation} onClick={triggerAnimation}>
-              <Zoom triggerOnce duration={1100} as="span">
-                <span className={style.hello}>Hello </span>
-              </Zoom>
+            <div
+              className={style.flex}
+              onMouseEnter={triggerAnimation}
+              onClick={triggerAnimation}
+            >
+              <span
+                className={`${style.hello} ${
+                  animateHello ? style.animateHello : ""
+                }`}
+              >
+                Hello{" "}
+              </span>
               <span
                 ref={thereRef}
-                className={`${style.there} ${animateThere ? style.animateThere : ""}`}
+                className={`${style.there} ${
+                  animateThere ? style.animateThere : ""
+                }`}
               >
                 there
               </span>
@@ -63,7 +94,17 @@ export const HomePageSetion = () => {
             </Link>
           </div>
         </div>
-        <img src={Iokee} className={style.iokee}/>
+            <img
+             onMouseEnter={triggerAnimation}
+             onClick={triggerAnimation}
+              src={Iokee}
+              className={`
+                ${style.iokee}
+                ${animateIokee ? style.animateIokee : ""}
+                ${isMobile ? style.mobileImage : ""}
+              `}
+    />
+        </div>
       </div>
     </section>
   );

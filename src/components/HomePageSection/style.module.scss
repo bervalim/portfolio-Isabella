@@ -1,46 +1,74 @@
 .section{
-
-    .cluster{
-        width: 100%;
-       
-        max-width: 600px;
+  position: relative;
+    .flexcontainer{
+      position: relative;
+      height: 100vh;
+      // display: flex;
+      // align-items: center;
+    }
+    .cluster {
+      position: absolute;
+      top: -15%;
+      right: 11%;
+      max-width: 500px;
+      width: 100%;
+      z-index: 1;
     }
 
-    .iokee{
-        width: 100%;
-        max-width: 800px;
+    .mobileImage {
+      position: static !important;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    
+
+    .iokee {
+      position: absolute;
+      bottom: -30%;
+      right: -5%;
+      max-width: 800px;
+      width: 100%;
+      z-index: 1;
     }
     .flexbox {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        // height: 100vh;
+      position: relative;
+      z-index: 2; // pra garantir que fique acima das imagens
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      height: 100vh;
+  
       
         h1 {
           width: 100%;
+          align-items: center;
         }
-
-        .flex{
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
+        .flex {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+        
+          @media (max-width: 1100px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+          }
+        
         }
 
         p{
             max-width: 1000px;
         }
 
-       
-
-
-//         .hello,
-//     .there {
-//   display: inline-block;
-// }
-
-        // max-width: 1000px;
-        // padding: 100px 20px; // espaçamento interno
       }
     svg {
         transition: transform 0.2s ease;
@@ -54,7 +82,7 @@
         }
       }
 
-      span:hover{
+      a span:hover{
         text-decoration: underline;
       }
 
@@ -97,6 +125,65 @@
       
       .animateThere {
         animation: thereKick 1.2s ease-in-out forwards;
+      }
+
+      @keyframes helloZoom {
+        0% {
+          transform: scale(0.6);
+          opacity: 0;
+        }
+      
+        60% {
+          transform: scale(2);
+          opacity: 1;
+        }
+      
+        100% {
+          transform: scale(1);
+        }
+      }
+      
+      .animateHello {
+        animation: helloZoom 0.9s ease-out forwards;
+      }
+      
+      .hello {
+        display: inline-block;
+        white-space: nowrap;
+        transform-origin: center;
+      }
+
+      @keyframes dropIn {
+        0% {
+          transform: translateY(-100px);
+          opacity: 0;
+        }
+        60% {
+          transform: translateY(20px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes riseIn {
+        0% {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+      .animateCluster {
+        animation: dropIn 1.2s ease-out forwards;
+      }
+      
+      .animateIokee {
+        animation: riseIn 1.3s ease-out forwards;
       }
 
       
