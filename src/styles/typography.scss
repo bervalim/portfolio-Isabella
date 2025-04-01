@@ -73,6 +73,14 @@
         font-weight: 400;
         font-size: clamp(.5625rem, 3vw, 1rem);
         color: var(--gray-100);
+
+        &.variation{
+            font-size: clamp(17px,4vw,20px);
+        }
+
+        &.anotherVariation{
+            font-size: clamp(16px,4vw,18px);
+        }
     }
 
     &.three{
@@ -101,6 +109,10 @@
         font-size: clamp(.6875rem, 4vw, .9375rem);
         color: var(--gray-500);
 
+        &.variation{
+            color: var(--gray-25);
+        }
+
     }
 
     &.seven{
@@ -127,6 +139,21 @@
         color: var(--gray-50);
         font-size: clamp(12px,4vw,16px);
         font-weight: 700;
+
+        &.variation{
+            font-size: clamp(11px,4vw,14px);
+        }
+
+        &.anoterVariation{
+            text-transform: uppercase;
+        }
+    }
+
+    &.eleven{
+        font-weight: 400;
+        line-height: 150%;
+        font-size: clamp(15px, 4vw, 18px);
+        color: var(--gray-50);;
     }
 
     &.links{
