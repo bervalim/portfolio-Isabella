@@ -5,24 +5,27 @@ import mackbook from "../../assets/MacBookAir.png";
 
 export const AdvisorResearchSection = () => {
     return (
-       <section>
-            <div className="container md">
+       <section className={style.section}>
+            <div className="container">
                 <h3 className="title six">2.1 What is the user trying to accomplish?</h3>
-                <div>
+                <p className="paragraph eleven">Based on personas, product requirements and delivrey alignment we defined
+                the user goals related to the new feature.</p>
+                <div className={style.flexbox}>
                     <div>
-                        <p className="paragraph eleven">Based on personas, product requirements and delivrey alignment we defined
-                        the user goals related to the new feature.</p>
-                        <div> 
-                            <span className="paragraph six variation">Personas</span>
-                            <img src={lock}></img>
-                        </div>
+                       
+                        <div className={style.flexLead}>
+                            <div  className={style.flexIconBox}> 
+                                <span className="paragraph six variation">Personas</span>
+                                <img src={lock}></img>
+                            </div>
 
-                        <div>
-                            <span className="paragraph six variation">Vision User Needs</span>
-                            <img src={lock}></img>
+                            <div  className={style.flexIconBox}>
+                                <span className="paragraph six variation">Vision User Needs</span>
+                                <img src={lock}></img>
+                            </div>
                         </div>
-                        <div>
-                            <div>
+                        <div className={style.box}>
+                            <div className={style.flexItemBox}>
                                 <img src={building}></img>
                                 <span className="paragraph ten variation">MERCHANT NEEDS</span>
                             </div>
@@ -30,8 +33,8 @@ export const AdvisorResearchSection = () => {
                         </div>
                         
                     </div>
-                    <div>
-                        <img src={mackbook}></img>
+                    <div className={style.imageWrapper}>
+                        <img className={style.computer} src={mackbook}></img>
                     </div>
 
                 </div>
