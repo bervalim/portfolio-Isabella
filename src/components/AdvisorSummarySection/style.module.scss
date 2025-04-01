@@ -10,11 +10,11 @@
             flex-direction: column;
             justify-content: flex-end;
             height: 100%;
-            padding-bottom: 75px; // ajusta conforme o rodapé do monitor
+            padding-bottom: 75px; 
 
             h2 {
                 margin: 0;
-                transform: translateY(5px); // ajuste fino para alinhar com a base da imagem
+                transform: translateY(5px);
               }
           
         }
@@ -53,4 +53,69 @@
           }
         }
     }
+
+    .flexContainer{
+      display: flex;
+      flex-direction: row;
+      gap: 80px;
+      // justify-content: space-between
+
+      @media(max-width:540px){
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      h4{
+        margin-top: 71px;
+        margin-bottom: 20px;
+      }
+
+      p{
+        width: 100%;
+        max-width: 591px;
+      }
+
+      .secondParagraph{
+        margin-top: 20px;
+      }
+
+
+    }
+
+    .grid{
+      margin-top: 38px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;    
+      gap: 35px;
+
+     
+     
+    
+     
+      .box{
+        background-color: #F7F7F8;
+        border-radius: 8px;
+        padding: 16px 40px;
+        max-width: 100%;
+      }
+
+      .flexItem{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 8px;
+      }
+
+      @media(max-width:403px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      
+    }
+
+
 }

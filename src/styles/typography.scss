@@ -123,6 +123,12 @@
         font-size: clamp(20px,4vw,23px);
     }
 
+    &.ten{
+        color: var(--gray-50);
+        font-size: clamp(12px,4vw,16px);
+        font-weight: 700;
+    }
+
     &.links{
         font-weight: 400;
         line-height: 150%;
