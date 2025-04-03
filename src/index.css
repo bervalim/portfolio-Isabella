@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-gray-800: #252d3c;
+  --color-gray-50: #5f6d7e;
+  --color-gray-500: #2e3646;
+  --color-gray-100: #49556d;
+  --color-gray-200: #384255;
+  --color-gray-950: #151b28;
+  --color-gray-25: #919ba7;
+  --font-display: "Inter", "sans-serif";
+}
