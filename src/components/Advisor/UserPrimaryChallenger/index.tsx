@@ -1,4 +1,10 @@
 import lock from "../../../assets/lock.png";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 interface ICard {
   title: string;
@@ -25,7 +31,7 @@ export function UserPrimaryChalleger() {
       <h3 className="title six">
         2.2 What are the user's primary challenges in their daily work?
       </h3>
-      <p className="paragraph eleven  mt-[16px]">
+      <p className="paragraph eleven mt-[16px]">
         After identifying the goals, we then listed problem statements based on
         the user’s journey research and disconevery sessions with consultants
         and stakeholders.
