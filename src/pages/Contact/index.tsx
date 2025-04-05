@@ -1,7 +1,9 @@
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import { DefaultTemplate } from "../../components/DefaultTemplate"
 import styles from "./styles.module.scss"
-import { FiFileText } from "react-icons/fi";
+import phone from "../../assets/phone.png"
+import buttonIcon from "../../assets/Button Icon.png"
+import Envelope from "../../assets/envelope.png"
 
 export const Contact = () => {
     return (
@@ -13,8 +15,9 @@ export const Contact = () => {
               <div className={styles.infoItem}>
                 <div className={styles.label} >
                     <span className="paragraph one" >
-                    Email <FaEnvelope />
+                    Email
                     </span>
+                   <img src={Envelope}></img>
                 </div>
              
                 <a className="paragraph links" href="mailto:isabella.czelusniak.ux@gmail.com" >
@@ -26,8 +29,9 @@ export const Contact = () => {
               <div className={styles.infoItem}>
                 <div className={styles.label}>
                     <span  className="paragraph one" >
-                        Phone <FaPhone />
+                        Phone
                     </span>
+                   <img src={phone}></img>
                 </div>
                 <p className="paragraph links">+351 913 533 253</p>
                 <hr />
@@ -36,8 +40,9 @@ export const Contact = () => {
               <div className={styles.infoItem}>
                 <div className={styles.label}>
                     <span className="paragraph one">
-                    Resume <FiFileText/>
+                    Resume 
                     </span>
+                    <img src={buttonIcon}></img>
                 </div>
                 <a href="https://example.com/resume.pdf" target="_blank" rel="noreferrer">
                   resume pdf link
