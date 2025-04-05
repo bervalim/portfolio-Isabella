@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import style from "./style.module.scss";
 import Cluster2 from "../../assets/Cluster4.png";
 import Iokee from "../../assets/Iooke4.png";
+import Arrow from "../../assets/arrow.png";
 
 export const HomePageSetion = () => {
   const thereRef = useRef<HTMLSpanElement>(null);
@@ -89,8 +90,10 @@ export const HomePageSetion = () => {
 
           <div className={style.link}>
             <Link to="/projects">
-              <span className="paragraph six">Projects</span>
-              <FiArrowUpRight size={19} />
+              <div className={style.label}>
+                  <span className="paragraph six">Projects</span>
+                  <img src={Arrow}></img>
+              </div>
             </Link>
           </div>
         </div>

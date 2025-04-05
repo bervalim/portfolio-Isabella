@@ -3,8 +3,6 @@
     .flexcontainer{
       position: relative;
       height: 100vh;
-      // display: flex;
-      // align-items: center;
     }
     .cluster {
       position: absolute;
@@ -26,11 +24,36 @@
       margin-right: auto;
     }
 
-    // .link{
-    //   display: flex;
-    //   flex-direction: row;
-    //   align-items: center;
-    // }
+    .label {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    
+      span {
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+    
+      img {
+        transition: transform 0.3s ease, opacity 0.7s ease;
+        transform: translateX(0);
+        opacity: 0.8;
+      }
+    
+      &:hover {
+        span {
+          transform: translateX(3px);
+          opacity: 0.85; // cor personalizada
+        }
+    
+        img {
+          transform: translateX(6px) rotate(12deg) scale(1.1);
+          opacity: 1;
+        }
+      }
+    }
 
     
 
@@ -76,14 +99,14 @@
         }
 
       }
-    svg {
+    .label img{
         transition: transform 0.2s ease;
       }
 
       &:hover {
         color: var(--primary-color);
   
-        svg {
+        .label img {
           transform: translateX(3px);
         }
       }
@@ -193,7 +216,5 @@
       }
 
       
-
-
 
 }
