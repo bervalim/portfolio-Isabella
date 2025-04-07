@@ -1,122 +1,117 @@
 .flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  .left {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-  
-    .left {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-    }
-  
-    .rigth {
-      display: flex;
-      align-items: center;
-      gap: 19px;
-  
-      .menuToggle {
-        display: none;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-      }
-    }
-  
-    .socials {
-      display: flex;
-      gap: 16px;
-    }
-  }
-  
-  // Links desktop
-  .desktopNav {
-    display: flex;
     gap: 25px;
   }
 
-
-  
-  // Menu mobile
-  .mobileMenu {
-    position: fixed;
-    inset: 0; // top: 0; right: 0; bottom: 0; left: 0
-    width: 100vw;
-    height: 100vh;
-    background-color: #EAEBF0;
-    z-index: 9999;
-  
-    padding: 6rem 1rem 2rem; // espaço para logo no topo e ícones no fim
+  .rigth {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    gap: 1.5rem;
-  
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-20px);
-    transition: all 0.4s ease-in-out;
-    &.open {
-      display: flex;
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
+    gap: 19px;
 
-    .elipse{
-      position:absolute;
-      top: 1.5rem;
-      left: 1.5rem;
-    }
-
-    .closeButton {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
+    .menuToggle {
+      display: none;
       background: transparent;
       border: none;
-      font-size: 2rem;
-      font-weight: bold;
-      color: var(--gray-800); // ou qualquer cor escura do projeto
       cursor: pointer;
-      z-index: 10000;
     }
-
-
   }
 
-  .flex_nav{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .mobileSocials {
+  .socials {
     display: flex;
     gap: 16px;
-    margin-top: auto; // ✨ isso força a div a ir pro "fim" da coluna
-    padding-bottom: 2rem;
   }
-  
-  @media (max-width: 768px) {
-    .desktopNav {
-      display: none;
-    }
+}
 
-    .flexbox {
-      flex-direction: row;
-  
-      .rigth {
-        .menuToggle {
-          display: block;
-        }
-  
-        .socials {
-          display: none;
-        }
+// Links desktop
+.desktopNav {
+  display: flex;
+  gap: 25px;
+}
+
+// Menu mobile
+.mobileMenu {
+  position: fixed;
+  inset: 0; // top: 0; right: 0; bottom: 0; left: 0
+  width: 100vw;
+  height: 100vh;
+  background-color: #eaebf0;
+  z-index: 9999;
+
+  padding: 6rem 1rem 2rem; // espaço para logo no topo e ícones no fim
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: all 0.4s ease-in-out;
+  &.open {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .elipse {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--gray-800); // ou qualquer cor escura do projeto
+    cursor: pointer;
+    z-index: 10000;
+  }
+}
+
+.flex_nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mobileSocials {
+  display: flex;
+  gap: 16px;
+  margin-top: auto; // ✨ isso força a div a ir pro "fim" da coluna
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .flexbox {
+    flex-direction: row;
+
+    .rigth {
+      .menuToggle {
+        display: block;
+      }
+
+      .socials {
+        display: none;
       }
     }
   }
-  
+}

@@ -5,21 +5,53 @@
 }
 
 .spacer {
-  height: 950px; /* Espaço inicial antes da div começar a subir */
+  /* height: 950px; */
 }
 
 .sticky-box {
   position: sticky;
-  top: 120px; /* Quando chega no topo, fica fixo */
-  background: red;
+  top: 120px;
   color: white;
   padding: 15px;
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
 
+.custom-responsive {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .custom-responsive {
+    display: block;
+  }
+}
+
 .content {
-  height: 1000px; /* Conteúdo longo para gerar scroll */
+  height: 1000px;
   background-color: #f0f0f0;
   padding: 20px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.lock-icon {
+  width: 100%;
+  max-width: 16px; /* ou o tamanho que você quiser */
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .custom-responsive {
+    display: block;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

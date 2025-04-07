@@ -1,0 +1,41 @@
+.accordion-container-div {
+  display: block;
+}
+
+.accordion-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.img-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .accordion-container {
+    grid-template-columns: 1fr; /* 1 coluna no desktop */
+  }
+
+  .accordion-container-div {
+    display: flex;
+  }
+
+  .img-container {
+    width: 80%;
+  }
+}
+
+.lock-icon {
+  width: 100%;
+  max-width: 16px; /* ou o tamanho que você quiser */
+  height: auto;
+  object-fit: contain;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: contain;
+}

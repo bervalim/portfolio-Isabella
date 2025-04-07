@@ -1,121 +1,107 @@
-.section{
-    .flexbox {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        gap: 10px;
+.section {
+  .flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 10px;
 
-        .texts{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            height: 100%;
-            padding-bottom: 75px; 
+    .texts {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+      padding-bottom: 75px;
 
-            h2 {
-                margin: 0;
-                transform: translateY(5px);
-              }
-          
-        }
-
-        @media(max-width:768px){
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
-
-            .texts{
-                padding-bottom: 0;
-            }
-        }
-
-        
-
-        .videoWrapper {
-          position: relative;
-          width: 100%;
-          max-width: 1200px;
-          
-      
-          .monitorImage {
-            width: 100%;
-          }
-      
-          .advisorVideo {
-            position: absolute;
-            top: 4.8%;         // subiu um pouco mais
-            left: 6.4%;        // empurrou mais para a direita
-            width: 88%;      // levemente menor para não ultrapassar as bordas
-            height: 82.2%;     // ligeiramente menor
-            object-fit: cover;
-            border-radius: 4px;
-            pointer-events: none;
-          }
-        }
+      h2 {
+        margin: 0;
+        transform: translateY(5px);
+      }
     }
 
-    .flexContainer{
-      display: flex;
-      flex-direction: row;
-      gap: 80px;
-      // justify-content: space-between
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
 
-      @media(max-width:540px){
-        flex-direction: column;
-        gap: 20px;
+      .texts {
+        padding-bottom: 0;
       }
+    }
 
-      h4{
-        margin-top: 71px;
-        margin-bottom: 20px;
-      }
+    .videoWrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
 
-      p{
+      .monitorImage {
         width: 100%;
-        max-width: 591px;
       }
 
-      .secondParagraph{
-        margin-top: 20px;
+      .advisorVideo {
+        position: absolute;
+        top: 4.8%; // subiu um pouco mais
+        left: 6.4%; // empurrou mais para a direita
+        width: 88%; // levemente menor para não ultrapassar as bordas
+        height: 82.2%; // ligeiramente menor
+        object-fit: cover;
+        border-radius: 4px;
+        pointer-events: none;
       }
+    }
+  }
 
+  .flexContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    // justify-content: space-between
 
+    @media (max-width: 540px) {
+      flex-direction: column;
+      gap: 20px;
     }
 
-    .grid{
-      margin-top: 38px;
+    h4 {
+      margin-top: 71px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      width: 100%;
+      max-width: 591px;
+    }
+
+    .secondParagraph {
+      margin-top: 20px;
+    }
+  }
+
+  .grid {
+    margin-top: 38px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 35px;
+
+    .box {
+      background-color: #f7f7f8;
+      border-radius: 8px;
+      padding: 16px 40px;
+      max-width: 100%;
+    }
+
+    .flexItem {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;    
-      gap: 35px;
-
-     
-     
-    
-     
-      .box{
-        background-color: #F7F7F8;
-        border-radius: 8px;
-        padding: 16px 40px;
-        max-width: 100%;
-      }
-
-      .flexItem{
-        display: flex;
-        gap: 15px;
-        align-items: center;
-        justify-content: flex-start;
-        margin-bottom: 8px;
-      }
-
-      @media(max-width:403px){
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      
+      gap: 15px;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 8px;
     }
 
-
+    @media (max-width: 403px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }

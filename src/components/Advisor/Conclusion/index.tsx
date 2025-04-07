@@ -8,7 +8,7 @@ interface ICard {
 
 function Card({ text, title }: ICard) {
   return (
-    <div className="flex flex-col items-start !p-[32px] gap-4  h-[172px] bg-[#F7F7F8]  rounded-[8px] p-[24px]  font-primary text-gray-50">
+    <div className="flex flex-col items-start !p-[32px] gap-4  min:h-[172px] bg-[#F7F7F8]  rounded-[8px] p-[24px]  font-primary text-gray-50">
       <div className="font-[700] mb-[6px]">
         <p>{title.toUpperCase()}</p>
       </div>
@@ -26,7 +26,7 @@ function Card({ text, title }: ICard) {
 
 export function Conclusion() {
   return (
-    <div className="container md font-display mb-[450px]">
+    <div className="container md font-display mb-[450px]" id="4.2">
       <h3 className="title six">
         4.2 What were the learnings, conclusions and considerations?
       </h3>
@@ -35,22 +35,23 @@ export function Conclusion() {
         working with cross-functional teams.
       </p>
 
-      <div className="flex gap-[16px] text-gray-25 mb-[48px] mt-[16px]">
+      <div className="flex gap-[16px] text-gray-25 mb-[48px] mt-[16px] flex-wrap">
         <span className="flex gap-[6px]">
-          Design System Initiative <img src={lock} />
+          Design System Initiative <img src={lock} className="lock-icon" />
         </span>
         <span className="flex gap-[6px]">
-          Research Structure <img src={lock} />
+          Research Structure <img src={lock} className="lock-icon" />
         </span>
         <span className="flex gap-[6px]">
-          Vision Initiative <img src={lock} />
+          Vision Initiative <img src={lock} className="lock-icon" />
         </span>
         <span className="flex gap-[6px]">
-          Ticketing & Tracking Processes <img src={lock} />
+          Ticketing & Tracking Processes{" "}
+          <img src={lock} className="lock-icon" />
         </span>
       </div>
 
-      <div className="grid grid-flow-col grid-rows-1 gap-[24px]">
+      <div className="card-container">
         <Card
           text={[
             "The project went well, and the development process ran smoothly.",

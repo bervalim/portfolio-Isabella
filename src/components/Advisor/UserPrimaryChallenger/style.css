@@ -1,0 +1,18 @@
+.challenges-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .challenges-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.lock-icon {
+  width: 100%;
+  max-width: 16px; /* ou o tamanho que você quiser */
+  height: auto;
+  object-fit: contain;
+}

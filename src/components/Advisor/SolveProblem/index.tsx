@@ -4,6 +4,7 @@ import img2 from "../../../assets/tela-2.png";
 import img3 from "../../../assets/tela-3.png";
 import img4 from "../../../assets/tela-4.png";
 import img5 from "../../../assets/tela-5.png";
+import "./style.css";
 
 import {
   Accordion,
@@ -37,7 +38,7 @@ export function SolveProblem() {
   const [tab, setTab] = useState({ img: img1, item: "item-1" });
 
   return (
-    <div className="container md font-display">
+    <div className="container md font-display" id="3.1">
       <h3 className="title six">3.1 How did we solve the problems?</h3>
       <p className="paragraph eleven  mt-[16px]">
         We collected all the research, requirements, and findings, then turned
@@ -51,15 +52,15 @@ export function SolveProblem() {
 
       <div className="flex gap-[16px] text-gray-25 mb-[48px] mt-[16px]">
         <span className="flex gap-[6px]">
-          Vision Problem Statements <img src={lock} />
+          Vision Problem Statements <img src={lock} className="lock-icon" />
         </span>
         <span className="flex gap-[6px]">
-          Merchant User Journey <img src={lock} />
+          Merchant User Journey <img src={lock} className="lock-icon" />
         </span>
       </div>
 
-      <div className="flex justify-between gap-[20px]">
-        <div className="w-[20%]">
+      <div className="accordion-container-div justify-between gap-[20px]">
+        <div className="w-[20%] accordion-container">
           <Accordion
             type="single"
             collapsible
@@ -152,8 +153,8 @@ export function SolveProblem() {
           </Accordion>
         </div>
 
-        <div className="w-[80%]">
-          <img src={tab.img} height={699} className="w-full rounded-[16px]" />
+        <div className="img-container">
+          <img src={tab.img} height={699} className="responsive-img" />
         </div>
       </div>
     </div>

@@ -2,6 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"], // Certifique-se de que está apontando para seus arquivos corretamente
   theme: {
+    screens: {
+      sm: "576px",
+      md: "960px",
+      lg: "1440px",
+    },
     extend: {
       fontFamily: {
         primary: ["Inter", "sans-serif"],

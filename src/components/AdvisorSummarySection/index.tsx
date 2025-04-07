@@ -1,19 +1,18 @@
-import Suitcase from "../../assets/suitcase.png";
 import Desktop from "../../assets/desktop.png";
-import Pencil from "../../assets/pencil.png";
 import FileText from "../../assets/file-text.png";
-import Vector from "../../assets/Vector.png";
 import Forecast from "../../assets/Forecasting 1.png";
+import Pencil from "../../assets/pencil.png";
+import Suitcase from "../../assets/suitcase.png";
+import Vector from "../../assets/Vector.png";
 import video from "../../assets/videoAdvisor.mp4";
 import style from "./style.module.scss";
-import lock from "../../assets/lock.png";
 
 export const Summary = () => {
   return (
-    <div className="container md font-display mb-[450px]">
+    <div className="container md font-display w-full" id="1.">
       <h3 className="title six">1. What is PromoAI</h3>
-      <div className="flex max-w-[100%] mt-[58px] mb-[58px]">
-        <div className="w-[50%] pr-[20px]">
+      <div className="flex flex-wrap max-w-[100%] mt-[58px] mb-[58px] gap-[48px]">
+        <div className="w-[100%] md:w-[47.72%]">
           <p className="text-gray-50 font-[700] text-[14px] mb-[16px]">
             ABOUT THE PRODUCT
           </p>
@@ -30,7 +29,7 @@ export const Summary = () => {
             </span>
           </p>
         </div>
-        <div className="w-[50%]">
+        <div className="md:w-[47.72%]">
           <p className="text-gray-50 font-[700] text-[14px] mb-[16px]">
             MODULE GOALS & PURPOSE
           </p>
@@ -45,37 +44,37 @@ export const Summary = () => {
         </div>
       </div>
 
-      <div className="flex min-w-[100%]">
-        <div className="grid grid-cols-8 gap-[35px]">
-          <div className="bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
+      <div className="flex w-[100%]">
+        <div className="flex gap-[16.75px] min-w-[100%] flex-wrap">
+          <div className="min-w-[12.84%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
             <div className="flex gap-[8px]">
               <img src={Suitcase}></img>
               <span className="paragraph ten">TYPE</span>
             </div>
             <p className="paragraph seven">Contract</p>
           </div>
-          <div className="bg-[white] col-span-2 pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
+          <div className="min-w-[20.93%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
             <div className="flex gap-[8px]">
               <img src={Desktop} />
               <span className="paragraph ten">TOOLS</span>
             </div>
             <p className="paragraph seven">Figma, Confluence, JIRA</p>
           </div>
-          <div className="bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
+          <div className="min-w-[13.67%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
             <div className="flex gap-[8px]">
               <img src={Pencil} />
               <span className="paragraph ten">ROLE</span>
             </div>
             <p className="paragraph seven">UX Designer</p>
           </div>
-          <div className="bg-[white] col-span-2 pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
+          <div className="min-w-[23.91%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
             <div className="flex gap-[8px]">
               <img src={FileText} />
               <span className="paragraph ten">SCOPE</span>
             </div>
             <p className="paragraph seven">New Module on App Platform</p>
           </div>
-          <div className="bg-[white] col-span-2 pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
+          <div className="min-w-[22.46%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
             <div className="flex gap-[8px]">
               <img src={Vector} />
               <span className="paragraph ten">TEAM</span>
