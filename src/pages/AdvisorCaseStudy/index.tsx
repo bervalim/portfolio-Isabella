@@ -1,5 +1,8 @@
 // import { AdvisorResearchSection } from "../../components/AdvisorResearchSection"
+import { Conclusion } from "@/components/Advisor/Conclusion";
+import { FinalResult } from "@/components/Advisor/FinalResult";
 import { SolveProblem } from "@/components/Advisor/SolveProblem";
+import { useEffect, useState } from "react";
 import { UserPrimaryChalleger } from "../../components/Advisor/UserPrimaryChallenger";
 import { AdvisorResearchSection } from "../../components/AdvisorResearchSection";
 import {
@@ -7,9 +10,6 @@ import {
   Summary,
 } from "../../components/AdvisorSummarySection";
 import { DefaultTemplate } from "../../components/DefaultTemplate";
-import { FinalResult } from "@/components/Advisor/FinalResult";
-import { Conclusion } from "@/components/Advisor/Conclusion";
-import { useEffect, useState } from "react";
 
 export const AdvisorCaseStudy = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -25,13 +25,13 @@ export const AdvisorCaseStudy = () => {
       { threshold: 0.8 } // Define quando a seção deve ser considerada "visível" (50% visível)
     );
 
-    ["1.", "2.2", "3.1", "4.1"].forEach((id) => {
+    ["1.", "2.1", "3.1", "4.1"].forEach((id) => {
       const section = document.getElementById(id);
       if (section) observer.observe(section);
     });
 
     return () => observer.disconnect();
-  }, [["1.", "2.2", "3.1", "4.1"]]);
+  }, [["1.", "2.1", "3.1", "4.1"]]);
 
   return (
     <DefaultTemplate>
@@ -59,7 +59,7 @@ export const AdvisorCaseStudy = () => {
                     ? "font-[600] !text-gray-200 border-gray-200"
                     : ""
                 }`}
-                href="#2.2"
+                href="#2.1"
               >
                 2. Research
               </a>
@@ -89,11 +89,11 @@ export const AdvisorCaseStudy = () => {
           </div>
           <div className="flex flex-col gap-[198px] w-[90%]">
             <Summary />
+            <AdvisorResearchSection />
             <UserPrimaryChalleger />
             <SolveProblem />
             <FinalResult />
             <Conclusion />
-            {/* <AdvisorResearchSection /> */}
           </div>
         </div>
       </div>
