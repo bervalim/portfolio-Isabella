@@ -55,7 +55,7 @@ export const BannerSection = () => {
                 </p>
 
                 <p className="paragraph two" id="text3">
-                  I’m looking for an opportunity to continue to grow as a UX Designer while being able to showcase my skills and value in product growth.
+                  I’m looking for an opportunity to continue to grow as a UX Designer while <br></br> being able to showcase my skills and value in product growth.
                 </p>
               </div>
               <div>

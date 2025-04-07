@@ -17,21 +17,21 @@ export const EductionSection = () => {
                         <div className={style.flexcontainer}>
                             <img src={Politecnico}/>
                             <div>
-                                <p className="paragraph four">Graphic Design Bachelor’s Degree</p>
+                                <p className="paragraph four !mb-[4px]">Graphic Design Bachelor’s Degree</p>
                                 <span className="paragraph three">ESAD.CR</span>
                             </div>
                         </div>
                         <div className={style.flexcontainer}>
                             <img src={Senai}/>
                             <div>
-                                <p className="paragraph four">Management Associate’s Degree</p>
+                                <p className="paragraph four !mb-[4px]">Management Associate’s Degree</p>
                                 <span  className="paragraph three">SENAI.PR</span>
                             </div>
                         </div>
                         <div className={style.flexcontainer}>
                             <img src={Uxcel}/>
                             <div>
-                                <p className="paragraph four">Information Architecture</p>
+                                <p className="paragraph four !mb-[4px]">Information Architecture</p>
                                 <span  className="paragraph three">Uxcel</span>
                             </div>
                         </div>
@@ -40,21 +40,21 @@ export const EductionSection = () => {
                         <div className={style.flexcontainer}>
                             <img src={Google}/>
                             <div>
-                                <p className="paragraph four">Start the UX Design Process: Empathize, Define, and Ideate</p>
+                                <p className="paragraph four !mb-[4px]">Start the UX Design Process: Empathize, Define, and Ideate</p>
                                 <span  className="paragraph three">Google | Coursera</span>
                             </div>
                         </div>
                         <div className={style.flexcontainer}>
                             <img src={Google}/>
                             <div>
-                                <p className="paragraph four">Foundations of User Experience (UX) Design</p>
+                                <p className="paragraph four !mb-[4px]">Foundations of User Experience (UX) Design</p>
                                 <span  className="paragraph three">Google | Coursera</span>
                             </div>
                         </div>
                         <div className={style.flexcontainer}>
                             <img src={USP}/>
                             <div>
-                                <p className="paragraph four">UX / UI: Fundamentos para o design de interface</p>
+                                <p className="paragraph four !mb-[4px]">UX / UI: Fundamentos para o design de interface</p>
                                 <span  className="paragraph three">Universidade de São Paulo | Coursera</span>
                             </div>
                         </div>
