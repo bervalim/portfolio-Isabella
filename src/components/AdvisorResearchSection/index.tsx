@@ -28,10 +28,12 @@ export const AdvisorResearchSection = () => {
                 </span>
               </p>
             </div>
-
           </div>
-          <img src={mackbook} className={style.floatingImage} width={1200}/>
+          <img src={mackbook} className={style.floatingImage} width={1200} />
         </div>
+        <span className="font-display font-[600] text-[200px] text-[#FAFBFC] absolute right-[-26rem] rotate-270 z-[-1] text-title">
+          Research
+        </span>
       </div>
     </>
   );

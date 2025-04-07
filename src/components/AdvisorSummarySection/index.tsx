@@ -6,45 +6,40 @@ import Suitcase from "../../assets/suitcase.png";
 import Vector from "../../assets/Vector.png";
 import video from "../../assets/videoAdvisor.mp4";
 import style from "./style.module.scss";
+import "./style.css";
 
 export const Summary = () => {
   return (
     <div className="container md font-display w-full" id="1.">
       <h3 className="title six">1. What is PromoAI</h3>
-      <div className="flex flex-wrap max-w-[100%] mt-[58px] mb-[58px] gap-[48px]">
-        <div className="w-[100%] md:w-[47.72%]">
-          <p className="text-gray-50 font-[700] text-[14px] mb-[16px]">
-            ABOUT THE PRODUCT
-          </p>
-          <p className="text-gray-100 mb-[16px]">
+      <div className="about-module-section">
+        <div className="about-column">
+          <p className="section-label">ABOUT THE PRODUCT</p>
+          <p className="section-text">
             A single platform for all promotional management, Promotion Solution
             is broken into three key modules: Promotion Analyzer, Promotion
             Planner, and Promotion Advisor.
           </p>
-          <p className="text-gray-100">
+          <p className="section-text">
             The app aims to{" "}
-            <span className="font-[700]">
+            <span className="bold">
               assist retailers in better planning, executing, and analyzing
               promotions.
             </span>
           </p>
         </div>
-        <div className="md:w-[47.72%]">
-          <p className="text-gray-50 font-[700] text-[14px] mb-[16px]">
-            MODULE GOALS & PURPOSE
-          </p>
-          <p className="text-gray-100">
+        <div className="about-column">
+          <p className="section-label">MODULE GOALS & PURPOSE</p>
+          <p className="section-text">
             The new module is designed to{" "}
-            <span className="font-[700]">optimize promotions</span>, helping
-            users achieve their goals related to{" "}
-            <span className="font-[700]">
-              sales, quantity, revenue, or margin.
-            </span>
+            <span className="bold">optimize promotions</span>, helping users
+            achieve their goals related to{" "}
+            <span className="bold">sales, quantity, revenue, or margin.</span>
           </p>
         </div>
       </div>
 
-      <div className="flex w-[100%]">
+      <div className="flex w-[100%] relative">
         <div className="flex gap-[16.75px] min-w-[100%] flex-wrap">
           <div className="min-w-[12.84%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
             <div className="flex gap-[8px]">
@@ -82,6 +77,9 @@ export const Summary = () => {
             <p className="paragraph seven">Full Cross-functional Team</p>
           </div>
         </div>
+        <span className="font-[600] text-[150px] text-[#FAFBFC] absolute right-[0] bottom-[1rem] z-[-1] text-title">
+          Summary
+        </span>
       </div>
     </div>
   );

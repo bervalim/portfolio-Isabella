@@ -59,7 +59,10 @@ export function SolveProblem() {
         </span>
       </div>
 
-      <div className="accordion-container-div justify-between gap-[20px]">
+      <div className="accordion-container-div justify-between gap-[20px] relative">
+        <span className="font-display font-[600] text-[200px] text-[#FAFBFC] absolute right-[-11rem] top-[-10rem] z-[-1] text-title ">
+          Design
+        </span>
         <div className="w-[20%] accordion-container">
           <Accordion
             type="single"
