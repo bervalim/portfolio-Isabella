@@ -2,9 +2,17 @@
   display: block;
 }
 
+.accordion-container-flex {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;   
+  }
+}
+
 .accordion-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
@@ -27,10 +35,6 @@
 
   .accordion-container-div {
     display: flex;
-  }
-
-  .img-container {
-    width: 80%;
   }
 }
 

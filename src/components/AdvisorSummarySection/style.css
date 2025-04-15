@@ -11,10 +11,19 @@
   width: 100%;
 }
 
+.card {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .about-column {
     width: 47.72%;
   }
+
+  .card {
+    width: auto;
+  }
+  
 }
 
 .section-label {

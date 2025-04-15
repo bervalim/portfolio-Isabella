@@ -41,35 +41,35 @@ export const Summary = () => {
 
       <div className="flex w-[100%] relative">
         <div className="flex gap-[16.75px] min-w-[100%] flex-wrap">
-          <div className="min-w-[12.84%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
+          <div className="min-w-[12.84%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px] card">
             <div className="flex gap-[8px]">
               <img src={Suitcase}></img>
               <span className="paragraph ten">TYPE</span>
             </div>
             <p className="paragraph seven">Contract</p>
           </div>
-          <div className="min-w-[20.93%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
+          <div className="min-w-[20.93%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px] card">
             <div className="flex gap-[8px]">
               <img src={Desktop} />
               <span className="paragraph ten">TOOLS</span>
             </div>
             <p className="paragraph seven">Figma, Confluence, JIRA</p>
           </div>
-          <div className="min-w-[13.67%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
+          <div className="min-w-[13.67%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px] card">
             <div className="flex gap-[8px]">
               <img src={Pencil} />
               <span className="paragraph ten">ROLE</span>
             </div>
             <p className="paragraph seven">UX Designer</p>
           </div>
-          <div className="min-w-[23.91%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
+          <div className="min-w-[23.91%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px] card">
             <div className="flex gap-[8px]">
               <img src={FileText} />
               <span className="paragraph ten">SCOPE</span>
             </div>
             <p className="paragraph seven">New Module on App Platform</p>
           </div>
-          <div className="min-w-[22.46%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px]">
+          <div className="min-w-[22.46%] bg-[white] pl-[32px] pr-[32px] pt-[16px] pb-[16px] rounded-[8px] card">
             <div className="flex gap-[8px]">
               <img src={Vector} />
               <span className="paragraph ten">TEAM</span>

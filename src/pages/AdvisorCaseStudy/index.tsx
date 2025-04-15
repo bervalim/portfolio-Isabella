@@ -10,6 +10,7 @@ import {
   Summary,
 } from "../../components/AdvisorSummarySection";
 import { DefaultTemplate } from "../../components/DefaultTemplate";
+import "./style.css";
 
 export const AdvisorCaseStudy = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -87,7 +88,7 @@ export const AdvisorCaseStudy = () => {
               </a>
             </div>
           </div>
-          <div className="flex flex-col gap-[198px] w-[90%]">
+          <div className="container flex flex-col gap-[10vw]">
             <Summary />
             <AdvisorResearchSection />
             <UserPrimaryChalleger />

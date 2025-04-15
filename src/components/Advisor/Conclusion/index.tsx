@@ -26,7 +26,7 @@ function Card({ text, title }: ICard) {
 
 export function Conclusion() {
   return (
-    <div className="container md font-display mb-[450px]" id="4.2">
+    <div className="container md font-display mb-[200px]" id="4.2">
       <h3 className="title six">
         4.2 What were the learnings, conclusions and considerations?
       </h3>
