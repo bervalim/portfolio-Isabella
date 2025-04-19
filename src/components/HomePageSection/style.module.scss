@@ -1,220 +1,220 @@
-.section{
+.section {
   position: relative;
-    .flexcontainer{
-      position: relative;
-      height: 100vh;
+  .flexcontainer {
+    position: relative;
+    height: 100vh;
+  }
+  .cluster {
+    position: absolute;
+    top: -15%;
+    right: 11%;
+    max-width: 500px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .mobileImage {
+    position: static !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .label {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    span {
+      transition: transform 0.3s ease, color 0.3s ease;
     }
-    .cluster {
-      position: absolute;
-      top: -15%;
-      right: 11%;
-      max-width: 500px;
+
+    img {
+      transition: transform 0.3s ease, opacity 0.7s ease;
+      transform: translateX(0);
+      opacity: 0.8;
+    }
+
+    &:hover {
+      span {
+        transform: translateX(3px);
+        opacity: 0.85; // cor personalizada
+      }
+
+      img {
+        transform: translateX(6px) rotate(12deg) scale(1.1);
+        opacity: 1;
+      }
+    }
+  }
+
+  .iokee {
+    position: absolute;
+    bottom: -30%;
+    right: -5%;
+    max-width: 800px;
+    width: 100%;
+    z-index: 1;
+  }
+  .flexbox {
+    position: relative;
+    z-index: 2; // pra garantir que fique acima das imagens
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+
+    h1 {
       width: 100%;
-      z-index: 1;
+      align-items: center;
     }
-
-    .mobileImage {
-      position: static !important;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .label {
+    .flex {
       display: flex;
       flex-direction: row;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    
-      span {
-        transition: transform 0.3s ease, color 0.3s ease;
-      }
-    
-      img {
-        transition: transform 0.3s ease, opacity 0.7s ease;
-        transform: translateX(0);
-        opacity: 0.8;
-      }
-    
-      &:hover {
-        span {
-          transform: translateX(3px);
-          opacity: 0.85; // cor personalizada
-        }
-    
-        img {
-          transform: translateX(6px) rotate(12deg) scale(1.1);
-          opacity: 1;
-        }
+      gap: 20px;
+
+      @media (max-width: 1100px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
       }
     }
 
-    
-
-    .iokee {
-      position: absolute;
-      bottom: -30%;
-      right: -5%;
-      max-width: 800px;
-      width: 100%;
-      z-index: 1;
+    p {
+      max-width: 1000px;
     }
-    .flexbox {
-      position: relative;
-      z-index: 2; // pra garantir que fique acima das imagens
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      width: 100%;
-      height: 100vh;
+  }
+  .label img {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    color: var(--primary-color);
+
+    .label img {
+      transform: translateX(3px);
+    }
+  }
+
+  a span:hover {
+    text-decoration: underline;
+  }
+
+  .there {
+    transform-origin: bottom right; // Como uma porta girando da esquerda
+  }
+
+  @keyframes thereKick {
+    0% {
+      transform: translateX(100vw) rotate(90deg);
+      opacity: 0;
+    }
+
+    20% {
+      transform: translateX(80vw) rotate(60deg);
+      opacity: 1;
+    }
+
+    40% {
+      transform: translateX(40vw) rotate(30deg);
+    }
+
+    60% {
+      transform: translateX(20vw) rotate(10deg);
+    }
+
+    80% {
+      transform: translateX(5px) rotate(3deg);
+    }
+
+    100% {
+      transform: translateX(0) rotate(0deg);
+    }
+  }
+  .there {
+    display: inline-block;
+    white-space: nowrap;
+    transform-origin: bottom right;
+  }
+  .animateThere {
+    animation: animateThere 0.5s forwards;
+  }
   
-      
-        h1 {
-          width: 100%;
-          align-items: center;
-        }
-        .flex {
-          display: flex;
-          flex-direction: row;
-          gap: 20px;
-        
-          @media (max-width: 1100px) {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 10px;
-          }
-        
-        }
+  @keyframes animateThere {
+    0% {
+      transform: translate(500px, -300px) rotate(270deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(360deg);
+    }
+  }
 
-        p{
-            max-width: 1000px;
-        }
+  @keyframes helloZoom {
+    0% {
+      transform: scale(6);
+      opacity: 0;
+    }
 
-      }
-    .label img{
-        transition: transform 0.2s ease;
-      }
+    50% {
+      transform: scale(1.7);
+      opacity: 1;
+    }
 
-      &:hover {
-        color: var(--primary-color);
-  
-        .label img {
-          transform: translateX(3px);
-        }
-      }
+    100% {
+      transform: scale(1);
+    }
+  }
 
-      a span:hover{
-        text-decoration: underline;
-      }
+  .animateHello {
+    animation: helloZoom 0.5s ease-out forwards;
+  }
 
-      .there {
-        transform-origin: bottom right; // Como uma porta girando da esquerda
-      }
+  .hello {
+    display: inline-block;
+    white-space: nowrap;
+    transform-origin: center;
+  }
 
-      @keyframes thereKick {
-        0% {
-          transform: translateX(100vw) rotate(90deg);
-          opacity: 0;
-        }
-      
-        20% {
-          transform: translateX(80vw) rotate(60deg);
-          opacity: 1;
-        }
-      
-        40% {
-          transform: translateX(40vw) rotate(30deg);
-        }
-      
-        60% {
-          transform: translateX(20vw) rotate(10deg);
-        }
-      
-        80% {
-          transform: translateX(5px) rotate(3deg);
-        }
-      
-        100% {
-          transform: translateX(0) rotate(0deg);
-        }
-      }
-      .there {
-        display: inline-block;
-        white-space: nowrap;
-        transform-origin: bottom right;
-      }
-      
-      .animateThere {
-        animation: thereKick 1.2s ease-in-out forwards;
-      }
+  @keyframes dropIn {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(20px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
-      @keyframes helloZoom {
-        0% {
-          transform: scale(0.6);
-          opacity: 0;
-        }
-      
-        60% {
-          transform: scale(2);
-          opacity: 1;
-        }
-      
-        100% {
-          transform: scale(1);
-        }
-      }
-      
-      .animateHello {
-        animation: helloZoom 0.9s ease-out forwards;
-      }
-      
-      .hello {
-        display: inline-block;
-        white-space: nowrap;
-        transform-origin: center;
-      }
+  @keyframes riseIn {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
-      @keyframes dropIn {
-        0% {
-          transform: translateY(-100px);
-          opacity: 0;
-        }
-        60% {
-          transform: translateY(20px);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-      
-      @keyframes riseIn {
-        0% {
-          transform: translateY(100px);
-          opacity: 0;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-      
-      .animateCluster {
-        animation: dropIn 1.2s ease-out forwards;
-      }
-      
-      .animateIokee {
-        animation: riseIn 1.3s ease-out forwards;
-      }
+  .animateCluster {
+    animation: dropIn 1.2s ease-out forwards;
+  }
 
-      
-
+  .animateIokee {
+    animation: riseIn 1.3s ease-out forwards;
+  }
 }
