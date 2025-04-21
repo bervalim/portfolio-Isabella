@@ -1,98 +1,135 @@
 .section {
-    margin-top: 80px;
-   
-    .flexbox {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 20px;
-      position: relative;
-    
-      h2{
-        top: -5%;
-        left: 75%;
-        position: absolute;
-        z-index: 1;
-      }
+  margin-top: 80px;
 
+  .flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    position: relative;
 
-      @media (max-width: 960px) {
-        flex-direction: column;
-        gap: 30px;
-  
-        h2 {
-          position: static; 
-      
-        }
-      }
+    h2 {
+      top: -5%;
+      left: 75%;
+      position: absolute;
+      z-index: 1;
     }
-    
-  
-    .imageWrapper {
-      flex: 1;
-      max-width: 700px;
-      width: 100%;
-      position: relative;
-  
-      .bgImage {
-        opacity: 0.85;
-        position: relative;
-        z-index: 2;
-      }
-  
-    }
-  
-    .content {
-      max-width: 500px;
-      display: flex;
+
+    @media (max-width: 960px) {
       flex-direction: column;
-      gap: 20px;
-  
-      
-  
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-  
-        span {
-          background-color: #f1f1f1;
-          padding: 6px 12px;
-          border-radius: 6px;
-          white-space: nowrap;
-        }
-      }
-  
-      .caseStudyLink {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-weight: 500;
-        color: var(--gray-900);
-        text-decoration: none;
+      gap: 30px;
 
-        span:hover{
-          text-decoration: underline;
-      }
-
-  
-        svg {
-          transition: transform 0.2s ease;
-        }
-  
-        &:hover {
-          color: var(--primary-color);
-  
-          svg {
-            transform: translateX(3px);
-          }
-        }
-      }
-  
-      @media (max-width: 1024px) {
-        align-items: center;
-        text-align: center;
+      h2 {
+        position: static;
       }
     }
   }
-  
+
+  .imageWrapper {
+    flex: 1;
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+
+    .bgImage {
+      opacity: 0.85;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .bgImage {
+        width: 270px !important;
+      }
+    }
+  }
+
+  .content {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      span {
+        background-color: #f1f1f1;
+        padding: 6px 12px;
+        border-radius: 6px;
+        white-space: nowrap;
+      }
+    }
+
+    .caseStudyLink {
+      display: inline-flex;
+      align-items: stretch;
+      gap: 6px;
+      font-weight: 500;
+      color: var(--gray-900);
+      text-decoration: none;
+
+      span:hover {
+        text-decoration: underline;
+      }
+
+      svg {
+        transition: transform 0.2s ease;
+      }
+
+      &:hover {
+        color: var(--primary-color);
+
+        svg {
+          transform: translateX(3px);
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .titleText {
+  }
+
+  .subTitle {
+  }
+
+  .caseStudyLinkDiv {
+  }
+
+  @media (max-width: 768px) {
+    .caseStudyLinkDiv {
+      width: 100%;
+      display: flex;
+      margin-left: 5px;
+    }
+
+    .subTitle {
+      text-align: start;
+      width: 100%;
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #49556d;
+      }
+    }
+
+    .titleText {
+      position: absolute;
+      z-index: 100;
+      left: 225px;
+      top: -15px;
+
+      h2 {
+        font-weight: 600;
+        font-size: 35px;
+      }
+    }
+  }
+}
