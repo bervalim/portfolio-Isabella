@@ -50,7 +50,7 @@ export const HomePageSetion = () => {
             src={Cluster2}
             onMouseEnter={triggerAnimation}
             onClick={triggerAnimation}
-            className={`
+            className={`${style.topImage} 
         ${style.cluster}
         ${animateCluster ? style.animateCluster : ""}
         ${isMobile ? style.mobileImage : ""}
@@ -81,7 +81,7 @@ export const HomePageSetion = () => {
               </div>
             </h1>
 
-            <p className="paragraph biggest">
+            <p className={`${style.textInitial} paragraph biggest`}>
               I’m Isabella Czelusniak, a passioned and determined UX Designer
               that values collaboration, creativity and product vision.
             </p>

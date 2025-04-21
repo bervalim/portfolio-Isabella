@@ -14,14 +14,9 @@
   }
 
   .mobileImage {
-    position: static !important;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute !important;
+    bottom: 320px !important;
+
   }
 
   .label {
@@ -77,6 +72,12 @@
       width: 100%;
       align-items: center;
     }
+
+    @media (max-width: 768px) {
+      height: 30vh;
+      max-width: 100% !important;
+    }
+
     .flex {
       display: flex;
       flex-direction: row;
@@ -87,6 +88,10 @@
         align-items: center;
         text-align: center;
         gap: 10px;
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: row;
       }
     }
 
@@ -149,7 +154,7 @@
   .animateThere {
     animation: animateThere 0.5s forwards;
   }
-  
+
   @keyframes animateThere {
     0% {
       transform: translate(500px, -300px) rotate(270deg);
@@ -216,5 +221,36 @@
 
   .animateIokee {
     animation: riseIn 1.3s ease-out forwards;
+  }
+
+  .link {
+    margin-top: 50px;
+  }
+
+  .topImage {
+  }
+
+  .textInitial {
+  }
+
+  @media (max-width: 768px) {
+    .textInitial {
+      width: 90%;
+    }
+
+    .topImage {
+      position: absolute !important;
+      width: 60%;
+      top: -180px;
+      right: 50px;
+    }
+
+    .hello {
+      font-size: 73px;
+    }
+
+    .there {
+      font-size: 73px;
+    }
   }
 }
