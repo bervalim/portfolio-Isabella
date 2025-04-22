@@ -1,19 +1,20 @@
 import { ReactNode } from "react";
-import { Footer } from "../Footer"
-import { Header } from "../Header"
+import { Footer } from "../Footer";
+import { Header } from "../Header";
 import style from "./style.module.scss";
 
 interface DefaultTemplateProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
-export const DefaultTemplate = ({children}: DefaultTemplateProps) => {
-    return (
-        <div className={style.pageWrapper}>
-        <Header/>
-            <img className={style.imgux} src="../src/assets/ux-design.png" />
-            <main>{children}</main>
-        <Footer/>
-        </div>
-    )
-}
+export const DefaultTemplate = ({ children }: DefaultTemplateProps) => {
+  return (
+    <div className={style.pageWrapper}>
+      <Header />
+
+      <main>{children}</main>
+
+      <Footer />
+    </div>
+  );
+};
