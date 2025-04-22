@@ -55,12 +55,12 @@ export const IokeeSection = () => {
           </div>
 
           <div className={style.imageWrapper}>
-            {!isMobile && <h2 className="title one">Iokee</h2>}
+            {!isMobile && <h2 className={`${style.titleText} title one`}>Iokee</h2>}
             {!isMobile && (
               <motion.img
                 src={Iokee}
                 alt="Iokee App mockup"
-                className={style.image}
+                className={style.imagePc}
                 initial={{ opacity: 0, y: 40, scale: 0.95 }}
                 animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
                 whileHover={{ scale: 1.02, rotateZ: -1 }}

@@ -1,159 +1,148 @@
 .section {
-    .flexbox{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+  .flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
-      h2{
-        z-index: 0;
-        top: 11.5%;
-        left: 60%;
-        position: absolute;
-      }
-
-
-   
-      @media (max-width: 960px) {
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-
-        .content {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-          align-items: center;
-          text-align: center;
-
-
-          p{
-           margin: 0 auto;
-          }
-        }
-  
-  
-        h2 {
-          position: static; 
-          text-align: center;
-      
-        }
-
-        .tags {
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-    
-
-        .caseStudyWrapper{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-    
-        }
-
-        
-      }
-
+    h2 {
+      z-index: 0;
+      top: 11.5%;
+      left: 60%;
+      position: absolute;
     }
 
-    .imageWrapper{
-      max-width: 1200px;
-    }
-
-    img{
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      // max-width: 900px;
-
-
-    }
-
-    .caseStudyWrapper{
-      display: flex;
-      justify-content: flex-end;
-
-      svg {
-        transition: transform 0.2s ease;
-      }
-  
-      &:hover {
-        color: var(--primary-color);
-  
-        svg {
-          transform: translateX(3px);
-        }
-      }
-
-    }
-
-   
-    .content{
-      display: flex;
+    @media (max-width: 960px) {
       flex-direction: column;
-      gap: 20px;
+      gap: 30px;
+      align-items: center;
 
-      p{
-        align-self: flex-end;
-      }
-  
-    }
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
 
-
-
-   
-
-    .tags {
-      display: flex;
-      flex-direction: row;
-      gap: 18px;
-
-
-    
-
-      span {
-        background-color: #f1f1f1;
-        padding: 6px 12px;
-        border-radius: 6px;
-        white-space: nowrap;
+        p {
+          margin: 0 auto;
+        }
       }
 
-     
-    }
+      h2 {
+        position: static;
+        text-align: center;
+      }
 
-    .caseStudyLink{
-      span:hover{
-        text-decoration: underline;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .titleIokee {
-        position: relative !important;
-        left: 1rem !important;
-        top: 5rem !important;
-        color: #919BA7 !important;
-        width: 258px !important;
-        height: 40px !important;
-      }
-  
-      .description {
-        font-size: 14px !important;
-        width: 100% !important;
-        height: 42px !important;
-        text-align: start !important;
-      }
-  
-      .caseStudyWrapper {
-        justify-content: start !important;
-        width: 100% !important;
-      }
-  
       .tags {
-        width: 100% !important;
-        justify-content: start !important;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .caseStudyWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
+
+  img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    // max-width: 900px;
+  }
+
+  .caseStudyWrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    svg {
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      color: var(--primary-color);
+
+      svg {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      align-self: flex-end;
+    }
+  }
+
+  .tags {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+
+    span {
+      background-color: #f1f1f1;
+      padding: 6px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+  }
+
+  .caseStudyLink {
+    span:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .titleIokee {
+      position: relative !important;
+      left: 1rem !important;
+      top: 5rem !important;
+      color: #919ba7 !important;
+      width: 258px !important;
+      height: 40px !important;
+    }
+
+    .description {
+      font-size: 14px !important;
+      width: 100% !important;
+      height: 42px !important;
+      text-align: start !important;
+    }
+
+    .caseStudyWrapper {
+      justify-content: start !important;
+      width: 100% !important;
+    }
+
+    .tags {
+      width: 100% !important;
+      justify-content: start !important;
+    }
+  }
+}
+
+.titleText {
+  position: absolute !important;
+  left: 450px !important;
+  top: 300px !important;
+}
+
+.imagePc {
+  position: relative !important;
+  left: -450px !important;
+  top: 200px !important;
+}
+
+@media (max-width: 960px) {
+  .titleText {
+  }
+}
