@@ -20,7 +20,6 @@ export const ClusterSection = () => {
       <div className="container md">
         <div className={style.flexbox}>
           <div className={style.content}>
-            {isMobile && <h2 className="title one">Cluster</h2>}
             <p className="paragraph two">Chemical sales company Website</p>
 
             <div className={style.tags}>
@@ -30,14 +29,17 @@ export const ClusterSection = () => {
               <span className="paragraph seven">UX Research</span>
             </div>
             <div className={style.divCaseStudyLink}>
-              <span className="paragraph six" style={{ color: "#919BA7" }}>
+              <span
+                className={`${style.comingSoon} paragraph six`}
+                style={{ color: "#919BA7" }}
+              >
                 Coming soon
               </span>
             </div>
           </div>
 
           <div className={style.imageWrapper}>
-            {!isMobile && <h2 className="title one">Cluster</h2>}
+            <h2 className={`${style.titleClustes} title one`}>Cluster</h2>
             <motion.img
               src={Cluster2}
               alt="Cluster background UI"

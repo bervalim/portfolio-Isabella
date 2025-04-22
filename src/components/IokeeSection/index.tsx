@@ -22,6 +22,7 @@ export const IokeeSection = () => {
           <div className={style.content}>
             {isMobile && (
               <>
+                <h2 className={`title one ${style.titleIokee}`}>Iokee</h2>
                 <motion.img
                   src={Iokee}
                   alt="Iokee App mockup"
@@ -31,12 +32,11 @@ export const IokeeSection = () => {
                   whileHover={{ scale: 1.02, rotateZ: -1 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 />
-                <h2 className="title one">Iokee</h2>
               </>
             )}
 
-            <p className="paragraph two">
-              Energy equipment managment app for AJTEC Company
+            <p className={`paragraph two ${style.description}`}>
+              <>Energy equipment {isMobile && ( <br /> )} managment app for AJTEC Company</>
             </p>
 
             <div className={style.tags}>

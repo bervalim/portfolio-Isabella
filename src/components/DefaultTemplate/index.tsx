@@ -11,6 +11,7 @@ export const DefaultTemplate = ({children}: DefaultTemplateProps) => {
     return (
         <div className={style.pageWrapper}>
         <Header/>
+            <img className={style.imgux} src="../src/assets/ux-design.png" />
             <main>{children}</main>
         <Footer/>
         </div>

@@ -1,82 +1,101 @@
 .section {
-    margin-top: 30px;
+  margin-top: 76px;
 
-    .flexbox{
-      display: flex;
-      flex-direction: row;
-      align-items:flex-end;
-      position: relative;
+  .flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: relative;
 
-
-    h2{
+    h2 {
       position: absolute;
-      top:22%;
+      top: 22%;
       right: 55%;
-      
     }
 
     @media (max-width: 960px) {
       flex-direction: column-reverse;
       gap: 30px;
-      align-items: center;
-      justify-content: center;
 
       h2 {
-        position: static; 
-    
-      }
-    }
-
-
-    }
-
-    
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-
-      span {
-        background-color: #f1f1f1;
-        padding: 6px 12px;
-        border-radius: 6px;
-        white-space: nowrap;
-        margin-bottom: 18px;
-      }
-
-
-
-     
-    }
-
-    svg {
-      transition: transform 0.2s ease;
-    }
-
-    &:hover {
-      color: var(--primary-color);
-
-      svg {
-        transform: translateX(3px);
-      }
-    }
-
-    .caseStudyLink{
-      span:hover{
-        text-decoration: underline;
-      }
-    }
-
-    .content{
-
-      .divCaseStudyLink{
-        display: flex;
-        justify-content: flex-end;
-
-        
-      }
-      p{
-        margin-bottom: 15px;
+        position: static;
       }
     }
   }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: end;
+
+    @media (max-width: 768px) {
+      justify-content: end;
+    }
+
+    span {
+      background-color: #f1f1f1;
+      padding: 6px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      margin-bottom: 18px;
+    }
+  }
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    color: var(--primary-color);
+
+    svg {
+      transform: translateX(3px);
+    }
+  }
+
+  .caseStudyLink {
+    span:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .content {
+    p {
+      text-align: end !important;
+    }
+    @media (max-width: 768px) {
+      width: 70%;
+      justify-content: end;
+    }
+
+    .divCaseStudyLink {
+      display: flex;
+      justify-content: flex-end;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.titleClustes {
+  color: #919ba7 !important;
+}
+
+.comingSoon {
+}
+
+@media (max-width: 768px) {
+  .titleClustes {
+    font-weight: 600 !important;
+    font-size: 35px !important;
+    position: absolute !important;
+    top: -33px !important;
+    left: 10px;
+  }
+
+  .comingSoon {
+    margin-bottom: 120px;
+  }
+}
