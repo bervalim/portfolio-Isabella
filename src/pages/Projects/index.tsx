@@ -7,8 +7,8 @@ import style from "./style.module.scss";
 export const Projects = () => {
   return (
     <DefaultTemplate>
-      <span className={style.imgux}>UX <br/> Desingn</span>
-      <img className={style.imgWeb} src="../src/assets/web-design.png" />
+      {/* <span className={style.imgux}>UX <br/> Design</span> */}
+      {/* <img className={style.imgWeb} src="../src/assets/web-design.png" /> */}
       <AdvisorSection />
       <ClusterSection />
       <IokeeSection />
