@@ -1,23 +1,12 @@
+import { motion } from "framer-motion";
+import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Advisor3 from "../../assets/advisor.png";
-import { FiArrowUpRight } from "react-icons/fi";
-import style from "./style.module.scss";
 import { useInViewAnimation } from "../../hooks/useInviewAnimation";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import style from "./style.module.scss";
 
 export const AdvisorSection = () => {
   const { ref, isInView } = useInViewAnimation();
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 960);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 960);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <section className={style.section} ref={ref}>

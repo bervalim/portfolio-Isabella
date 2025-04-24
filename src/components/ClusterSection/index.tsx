@@ -1,20 +1,11 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import Cluster2 from "../../assets/Cluster4.png"; // foreground
 import { useInViewAnimation } from "../../hooks/useInviewAnimation";
 import style from "./style.module.scss";
 
 export const ClusterSection = () => {
   const { ref, isInView } = useInViewAnimation();
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 960);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 960);
-    };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   return (
     <section className={style.section} ref={ref}>
       <div className="container md">

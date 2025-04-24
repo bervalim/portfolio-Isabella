@@ -1,9 +1,8 @@
-import { FaEnvelope, FaPhone } from "react-icons/fa";
-import { DefaultTemplate } from "../../components/DefaultTemplate"
-import styles from "./styles.module.scss"
-import phone from "../../assets/phone.png"
-import buttonIcon from "../../assets/Button Icon.png"
-import Envelope from "../../assets/envelope.png"
+import buttonIcon from "../../assets/Button Icon.png";
+import Envelope from "../../assets/envelope.png";
+import phone from "../../assets/phone.png";
+import { DefaultTemplate } from "../../components/DefaultTemplate";
+import styles from "./styles.module.scss";
 
 export const Contact = () => {
     return (

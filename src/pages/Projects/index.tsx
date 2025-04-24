@@ -2,7 +2,6 @@ import { AdvisorSection } from "../../components/AdvisorSection";
 import { ClusterSection } from "../../components/ClusterSection";
 import { DefaultTemplate } from "../../components/DefaultTemplate";
 import { IokeeSection } from "../../components/IokeeSection";
-import style from "./style.module.scss";
 
 export const Projects = () => {
   return (
