@@ -17,7 +17,3 @@
   --color-gray-25: #919ba7;
   --font-display: "Inter", "sans-serif";
 }
-
-body, html {
-  overflow-x: hidden;
-}

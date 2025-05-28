@@ -1,0 +1,24 @@
+.imgCluster {
+  display: flex;
+  justify-content: center;
+  margin-top: 53px;
+}
+
+.clusterSpan {
+  position: relative;
+  right: -1160px;
+  font-weight: 700;
+  font-size: 64px;
+  color: #151b28;
+  font-family: "Inter", sans-serif;
+}
+
+.clusterDate {
+  position: relative;
+  right: -1325px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #5F6D7E;
+  font-family: "Inter", sans-serif;
+  font-style: italic;
+}
