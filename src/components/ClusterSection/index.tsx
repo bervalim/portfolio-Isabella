@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import Cluster2 from "../../assets/Cluster4.png"; // foreground
 import { useInViewAnimation } from "../../hooks/useInviewAnimation";
 import style from "./style.module.scss";
+import { Link } from "react-router-dom";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export const ClusterSection = () => {
   const { ref, isInView } = useInViewAnimation();
@@ -20,12 +22,10 @@ export const ClusterSection = () => {
               <span className="paragraph seven">UX Research</span>
             </div>
             <div className={style.divCaseStudyLink}>
-              <span
-                className={`${style.comingSoon} paragraph six`}
-                style={{ color: "#919BA7" }}
-              >
-                Coming soon
-              </span>
+              <Link to="/cluster" className={style.caseStudyLink}>
+                <span className="paragraph six">View Case Study</span>
+                <FiArrowUpRight size={19} />
+              </Link>
             </div>
           </div>
 
