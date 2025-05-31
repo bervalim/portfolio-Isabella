@@ -44,7 +44,7 @@ export function Modal({ children, setShow, show }: Props) {
       boxShadow: "0 5px 15px rgba(0,0,0,0.3)",
       zIndex: 1000,
       width: "1302px",
-      height: "576px",
+      height: "auto",
       textAlign: "center",
     },
     title: {

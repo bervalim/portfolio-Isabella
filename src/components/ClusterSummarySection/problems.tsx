@@ -1,18 +1,38 @@
 import build from "../../assets/building.svg";
 import cart from "../../assets/shopping-cart.svg";
+import arrow from "../../assets/arrow.png";
 import "./style.css";
+import { useState } from "react";
+import { Modal } from "../Modal";
+import img3 from "../../assets/Frame 48097663.png";
 
 export function Problems() {
+  const [show, setShow] = useState(false);
+
   return (
     <div className="container md font-display w-full mt-[127px]">
+      <Modal setShow={setShow} show={show}>
+        <div className="flex text-left">
+          <p className="text-[#384255] font-[700] text-[22px] mb-[25px]">
+            Competitive Analysis
+          </p>
+        </div>
+        <img src={img3} />
+      </Modal>
       <h3 className="title six">
         2.2 What problems block users from achieving their goals?
       </h3>
-      <p className="section-text mt-[16px]">
+      <p className="text-[18px] text-[#49556D] font-[400] mt-[16px]">
         To answer this question, we researched similar solutions by conducting a
         competitive analysis and defined problem statements for each user type.
       </p>
-      <p className="section-text">View Competitive Analysis</p>
+      <p
+        className="!text-[15px] !text-[#2E3646] font-[600] mt-[20px] cursor-pointer"
+        onClick={() => setShow(true)}
+      >
+        View Competitive Analysis
+        <img src={arrow} className="ml-[11px]" />
+      </p>
       <div className="flex mt-[58px] gap-[24px]">
         <div className="flex flex-col gap-[24px]">
           <div className="flex">
